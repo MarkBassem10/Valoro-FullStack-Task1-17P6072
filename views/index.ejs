@@ -1,0 +1,25 @@
+<html lang="en">
+<%- include("./header.ejs") %>
+
+<body>
+  <%- include("./nav.ejs") %>
+
+  <div class="Players content">
+    <h2>All Football players</h2>
+
+    <% if (blogs.length > 0) { %>
+      <% blogs.forEach(Player => { %>
+        <a class="single" href="/Players/<%= Player._id %>">
+          <h3 class="title"><%= Player.title %></h3>
+          <p class="snippet"><%= Player.snippet %></p>
+        </a>
+      <% }) %>
+    <% } else { %>
+      <p>There are no players yet.. Please add a new player</p>
+    <% } %>
+    
+  </div>
+
+  <%- include("./footer.ejs") %>
+</body>
+</html>

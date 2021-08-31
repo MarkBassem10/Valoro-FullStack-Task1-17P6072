@@ -1,0 +1,21 @@
+<html lang="en">
+<%- include("./header.ejs") %>
+
+<body>
+  <%- include("./nav.ejs") %>
+
+  <div class="create-Player content">
+    <form action="/Players" method="POST">
+      <label for="title"><h2> Player name:</h2></label>
+      <input type="text" id="title" name="title" required>
+      <label for="snippet">Player Age:</label>
+      <input type="text" id="snippet" name="snippet" required>
+      <label for="body">Player Position:</label>
+      <input id="body" name="body" required></input>
+      <button>Submit</button>
+    </form>
+  </div>
+
+  <%- include("./footer.ejs") %>
+</body>
+</html>
